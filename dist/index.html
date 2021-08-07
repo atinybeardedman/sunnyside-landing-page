@@ -9,88 +9,69 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | Sunnyside agency landing page</title>
   </head>
   <body>
     <nav class="navigation">
       <div class="navigation__item logo link"></div>
-      <div class="navigation__inner">
-        <ul>
-          <li class="navigation__item"><a href="#" class="navigation__link link">About</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link link">Services</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link link">Projects</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link link">Contact</a></li>
-        </ul>
+
+      <ul class="navigation__inner">
+        <li class="navigation__item">
+          <a href="#" class="navigation__link link">About</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link link">Services</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link link">Projects</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#" class="navigation__link link">Contact</a>
+        </li>
+      </ul>
+
+      <div class="navigation__item--md-hidden link">
+        <button class="hamburger-img"></button>
       </div>
     </nav>
     <main class="main">
-      <section class="section hero">
+      <section class="section hero full-bg header-img">
         <h1 class="hero__title">We are creatives</h1>
-        <div class="hero__arrow"></div>
+        <div class="arrow-down-img"></div>
       </section>
-      <section class="section section__tile-wrapper">
-        <article
-          class="
-            tile
-            tile__md-50
-            tile_100
-            text-tile
-          "
-        >
+      <section class="section tile-wrapper">
+        <article class="tile tile--md-50 tile--100 text-tile">
           <h2 class="text-tile__title">Transform your brand</h2>
           <p class="text-tile__description">
             We are a full-service creative agency specializing in helping brands
             grow fast. Engage your clients through compelling visuals that do
             most of the marketing for you.
           </p>
-          <a href="" class="text-tile__link_yellow"> Learn More </a>
+          <a href="" class="text-tile__link text-tile__link--yellow link"> Learn More </a>
         </article>
-        <article
-          class="
-            tile
-            tile__md-50
-            tile_100
-            full-bg
-          "
-        ></article>
+        <article class="tile tile--md-50 tile--100 full-bg transform-img"></article>
       </section>
-      <section class="section section__tile-wrapper">
-        <article
-          class="
-            tile
-            tile__md-50
-            tile_100
-            text-tile
-          "
-        >
+      <section class="section tile-wrapper">
+        <article class="tile tile--md-50 tile--100 text-tile">
           <h2 class="text-tile__title">Stand out to the right audience</h2>
           <p class="text-tile__description">
             Using a collaborative formula of designers, researchers,
             photographers, videographers, and copywriters, we’ll build and
             extend your brand in digital places.
           </p>
-          <a href="" class="text-tile__link_pink"> Learn More </a>
+          <a href="" class="text-tile__link text-tile__link--red link"> Learn More </a>
         </article>
-        <article
-          class="
-            tile
-            tile__md-50
-            tile_100
-            full-bg
-          "
-        ></article>
+        <article class="tile tile--md-50 tile--100 full-bg stand-out-img"></article>
       </section>
-      <section class="section section__tile-wrapper">
-        <article
-          class="
-            tile
-            tile__md-50
-            tile_100
-            combo-tile
-            full-bg
-          "
-        >
+      <section class="section tile-wrapper">
+        <article class="tile tile--md-50 tile--100 combo-tile full-bg graphic-design-img">
           <h3 class="combo-tile__title">Graphic Design</h3>
           <p class="combo-tile__description">
             Great design makes you memorable. We deliver artwork that
@@ -98,15 +79,7 @@
             attention.
           </p>
         </article>
-        <article
-          class="
-            tile
-            tile__md-50
-            tile_100
-            combo-tile
-            full-bg
-          "
-        >
+        <article class="tile tile--md-50 tile--100 combo-tile full-bg photography-img">
           <h3 class="combo-tile__title">Photography</h3>
           <p class="combo-tile__description">
             Increase your credibility by getting the most stunning, high-quality
@@ -118,7 +91,7 @@
         <h2 class="testimonial__title">Client Testimonials</h2>
         <div class="testimonial__article_wrapper">
           <article class="testimonial__article">
-            <img src="" alt="" class="testimonial__article_avatar" />
+            <div class="testimonial__article_avatar emily-img"></div>
             <p class="testimonial__article_text">
               We put our trust in Sunnyside and they delivered, making sure our
               needs were met and deadlines were always hit.
@@ -129,7 +102,7 @@
             </div>
           </article>
           <article class="testimonial__article">
-            <img src="" alt="" class="testimonial__article_avatar" />
+            <div class="testimonial__article_avatar thomas-img"></div>
             <p class="testimonial__article_text">
               Sunnyside’s enthusiasm coupled with their keen interest in our
               brand’s success made it a satisfying and enjoyable experience.
@@ -142,7 +115,7 @@
             </div>
           </article>
           <article class="testimonial__article">
-            <img src="" alt="" class="testimonial__article_avatar" />
+            <div class="testimonial__article_avatar jennie-img"></div>
             <p class="testimonial__article_text">
               Incredible end result! Our sales increased over 400% when we
               worked with Sunnyside. Highly recommended!
@@ -154,16 +127,16 @@
           </article>
         </div>
       </section>
-      <section class="section section__tile_wrapper">
-        <div class="tile tile__md-25 tile_50 full-bg"></div>
-        <div class="tile tile__md-25 tile_50 full-bg"></div>
-        <div class="tile tile__md-25 tile_50 full-bg"></div>
-        <div class="tile tile__md-25 tile_50 full-bg"></div>
+      <section class="section gallery">
+        <div class="gallery__image full-bg gallery-milkbottles-img"></div>
+        <div class="gallery__image full-bg gallery-orange-img"></div>
+        <div class="gallery__image full-bg gallery-cone-img"></div>
+        <div class="gallery__image full-bg gallery-sugar-cubes-img"></div>
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__name">
-        sunnyside
+      <div class="footer__logo">
+        <img src="./images/logo.svg">
       </div>
       <div class="footer__site-map">
         <a href="" class="site-map__link link">About</a

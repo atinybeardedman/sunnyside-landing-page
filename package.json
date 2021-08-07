@@ -1,0 +1,24 @@
+{
+  "name": "sunnyside-landing-page",
+  "version": "1.0.0",
+  "description": "Frontend Mentor Project: Sunnyside Landing Page",
+  "main": "index.js",
+  "scripts": {
+    "watch": "sass src/stylesheets/index.scss dist/style.css --watch",
+    "build": "sass src/stylesheets/index.scss dist/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atinybeardedman/sunnyside-landing-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atinybeardedman/sunnyside-landing-page/issues"
+  },
+  "homepage": "https://github.com/atinybeardedman/sunnyside-landing-page#readme",
+  "devDependencies": {
+    "sass": "^1.36.0"
+  }
+}
