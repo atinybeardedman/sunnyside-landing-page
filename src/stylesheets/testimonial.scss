@@ -1,0 +1,48 @@
+@use './colors';
+@use './typography';
+
+.testimonial {
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 4rem;
+}
+
+.testimonial__title {
+    color: colors.$gray-blue;
+    font-family: typography.$title-font-family;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: .2rem;
+    margin: 2rem auto;
+}
+
+.testimonial__article_avatar {
+    width: 75px;
+    height: 75px;
+    border-radius: 37.5px;
+    background-size: cover;
+    margin: 3.5rem auto;
+}
+
+.testimonial__article_text {
+    color: colors.$darker-gray-blue;
+    line-height: 1.75;
+    font-size: 18px;
+
+}
+
+.testimonial__article_name {
+    font-family: typography.$title-font-family;
+    color: colors.$dark-blue-neutral;
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: .75rem;
+}
+
+.testimonial__article_title {
+    font-family: typography.$body-font-family;
+    color: colors.$gray-blue;
+    font-size: 14px;
+    margin: 0 auto
+}

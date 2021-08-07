@@ -1,0 +1,25 @@
+
+@use './normalize';
+@use './typography';
+@use './tile';
+@use './images';
+@use './section';
+@use './navigation';
+@use './testimonial';
+@use './gallery';
+@use './footer';
+
+body {
+    font-family: typography.$body-font-family;
+    font-weight: 600;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    text-decoration: none;
+}
+

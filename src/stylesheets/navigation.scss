@@ -1,0 +1,43 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 5rem;
+
+    .navigation__inner {
+        display: none;
+        visibility: hidden;
+        list-style: none;
+        padding: 0;
+        flex-direction: row;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            visibility: visible;
+        }
+    }
+
+    .navigation__item {
+        list-style: none;
+        margin: 0 0.75rem;
+    }
+    
+    .navigation__item--md-hidden {
+        
+            @media screen and (min-width: 768px){
+                display: none;
+                visibility: hidden;
+            
+        }
+    }
+}
+
+.logo {
+    background-image: url('./images/logo.svg');
+    width: 124px;
+    height: 24px;
+}

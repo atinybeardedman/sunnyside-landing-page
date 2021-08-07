@@ -1,0 +1,14 @@
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery__image {
+    width: 50vw;
+    height: 50vw;
+    
+    @media screen and (min-width: 768px) {
+        width: 25vw;
+        height: 25vw;
+    }
+}

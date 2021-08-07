@@ -1,0 +1,22 @@
+@use './colors';
+@use './typography';
+
+.footer {
+    background-color: colors.$cyan-neutral;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer__logo {
+    color: colors.$cyan;
+    margin: 0 auto;
+}
+
+.footer__site-map {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.site-map__link {
+    color: colors.$dark-cyan-light;
+}
