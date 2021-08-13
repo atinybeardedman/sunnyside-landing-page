@@ -29,8 +29,7 @@ $sizes: 25, 50, 100;
 .text-tile {
     order: 2;
     .text-tile__title {
-        font-family: typography.$title-font-family;
-        font-weight: 900;
+        @extend .text-title;
         font-size: 2rem;
         color: colors.$dark-blue-neutral;
     }
@@ -42,11 +41,10 @@ $sizes: 25, 50, 100;
     }
 
     .text-tile__link {
+        @extend .text-title;
         margin: 1.5rem 0;
         text-transform: uppercase;
-        font-family: typography.$title-font-family;
         color: colors.$dark-blue-neutral;
-        font-weight: 900;
         position: relative;
         display: inline-block;
 
@@ -75,8 +73,7 @@ $sizes: 25, 50, 100;
     justify-content: flex-end;
 
     .combo-tile__title {
-        font-family: typography.$title-font-family;
-        font-weight: 900;
+        @extend .text-title;
         font-size: 28px;
         margin: 1.5rem 0;
     }

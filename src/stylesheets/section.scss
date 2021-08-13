@@ -9,9 +9,8 @@
     color: white;
 
     .hero__title {
+        @extend .text-title;
         font-size: 38px;
-        font-family: typography.$title-font-family;
-        font-weight: 900;
         text-transform: uppercase;
         text-align: center;
         letter-spacing: 0.5rem;

@@ -19,6 +19,16 @@ ul {
   list-style: none;
 }
 
+.text-normal, body, .testimonial__article_title {
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+}
+
+.text-title, .testimonial__title, .testimonial__article_name, .hero .hero__title, .text-tile .text-tile__title, .text-tile .text-tile__link, .combo-tile .combo-tile__title {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+}
+
 .tile-wrapper {
   display: flex;
   flex-direction: column;
@@ -66,8 +76,6 @@ ul {
   order: 2;
 }
 .text-tile .text-tile__title {
-  font-family: "Fraunces", serif;
-  font-weight: 900;
   font-size: 2rem;
   color: #23303e;
 }
@@ -79,9 +87,7 @@ ul {
 .text-tile .text-tile__link {
   margin: 1.5rem 0;
   text-transform: uppercase;
-  font-family: "Fraunces", serif;
   color: #23303e;
-  font-weight: 900;
   position: relative;
   display: inline-block;
 }
@@ -115,8 +121,6 @@ ul {
   justify-content: flex-end;
 }
 .combo-tile .combo-tile__title {
-  font-family: "Fraunces", serif;
-  font-weight: 900;
   font-size: 28px;
   margin: 1.5rem 0;
 }
@@ -256,8 +260,6 @@ ul {
 }
 .hero .hero__title {
   font-size: 38px;
-  font-family: "Fraunces", serif;
-  font-weight: 900;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.5rem;
@@ -307,18 +309,19 @@ ul {
 
 .testimonial {
   text-align: center;
-  padding: 2rem;
-  margin-bottom: 4rem;
+  padding: 2rem 1.5rem;
+}
+
+.testimonial__article {
+  margin-bottom: 4.5rem;
 }
 
 .testimonial__title {
   color: #a7abae;
-  font-family: "Fraunces", serif;
-  font-weight: 900;
   text-transform: uppercase;
   font-size: 16px;
   letter-spacing: 0.2rem;
-  margin: 2rem auto;
+  margin: 2rem auto 3.5rem;
 }
 
 .testimonial__article_avatar {
@@ -326,25 +329,23 @@ ul {
   height: 75px;
   border-radius: 37.5px;
   background-size: cover;
-  margin: 3.5rem auto;
+  margin: 2rem auto;
 }
 
 .testimonial__article_text {
   color: #5a636c;
-  line-height: 1.75;
+  line-height: 1.5;
   font-size: 18px;
+  margin: 2rem auto;
 }
 
 .testimonial__article_name {
-  font-family: "Fraunces", serif;
   color: #23303e;
-  font-weight: 900;
   font-size: 18px;
   margin-bottom: 0.75rem;
 }
 
 .testimonial__article_title {
-  font-family: "Barlow", sans-serif;
   color: #a7abae;
   font-size: 14px;
   margin: 0 auto;
@@ -372,23 +373,34 @@ ul {
   text-align: center;
 }
 
+.footer__logo-container {
+  margin: 2rem auto;
+}
+
 .footer__logo {
-  color: #26695a;
-  margin: 0 auto;
+  fill: #26695a;
+  transform: scale(1.25);
 }
 
 .footer__site-map {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding: 1rem 0;
 }
 
 .site-map__link {
   color: #458c7e;
+  font-size: 18px;
 }
 
-body {
-  font-family: "Barlow", sans-serif;
-  font-weight: 600;
+.footer__social {
+  padding: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social__icon-link {
+  color: #458c7e;
 }
 
 .main {

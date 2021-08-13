@@ -10,8 +10,7 @@
 @use './footer';
 
 body {
-    font-family: typography.$body-font-family;
-    font-weight: 600;
+    @extend .text-normal;
 }
 
 .main {
