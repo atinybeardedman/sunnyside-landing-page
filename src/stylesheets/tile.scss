@@ -5,6 +5,9 @@
 .tile-wrapper {
     display:flex;
     flex-direction: column;
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+    }
 }
 
 .tile {
@@ -13,6 +16,9 @@
     flex-shrink: 0;
     padding: 2rem 1rem;
     text-align: center;
+    @media screen and (min-width: 768px) {
+        height: 600px;
+    }
 }
 
 $sizes: 25, 50, 100;
@@ -32,6 +38,11 @@ $sizes: 25, 50, 100;
         @extend .text-title;
         font-size: 2rem;
         color: colors.$dark-blue-neutral;
+        @media screen and (min-width: 768px) {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
     }
 
     .text-tile__description {
@@ -57,13 +68,29 @@ $sizes: 25, 50, 100;
             width: 115%;
             height: .5rem;
             background-color: $val;
-            top: .75rem;
+            top: .8rem;
             left: -7.5%;
             z-index: -1;
             border-radius: .5rem;
 
             }
         }
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 0 auto;
+            padding: 0 8rem;
+            text-align: left;
+        }
+}
+
+.order-0--md {
+    @media screen and (min-width: 768px) {
+        order: 0;
+    }
 }
 
 .combo-tile {
@@ -82,12 +109,20 @@ $sizes: 25, 50, 100;
         margin-bottom: 2rem;
         font-size: 16px;
         margin-top: 0;
+        @media screen and (min-width: 768px) {
+            max-width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }
 
 .graphic-design-img {
-    .combo-tile__title, .combo-tile__description {
+    .combo-tile__title {
         color: colors.$dark-cyan;
+    }
+    .combo-tile__description{
+        color: colors.$cyan;
     }
 }
 
