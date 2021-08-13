@@ -33,9 +33,19 @@
 
 }
 
+
 .site-map__link {
-    color: colors.$dark-cyan-light;
     font-size: 18px;
+}
+
+.social__icon-link, .site-map__link {
+    color: colors.$dark-cyan-light;
+    fill: colors.$dark-cyan;
+    transition: color 0.3s, fill 0.3s;
+    &:hover {
+        color: colors.$white;
+        fill: colors.$white;
+    }
 }
 
 .footer__social {
@@ -44,9 +54,7 @@
     justify-content: space-evenly;
 }
 
-.social__icon-link {
-    color: colors.$dark-cyan-light;
-}
+
 
 .footer__section {
     @media screen and (min-width:768px) {
