@@ -1,0 +1,37 @@
+.full-bg {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+$images: header, transform, stand-out, graphic-design, photography,
+  gallery-cone, gallery-milkbottles, gallery-orange, gallery-sugar-cubes;
+
+@each $image in $images {
+  .#{$image}-img {
+    background-image: url("./images/mobile/image-#{$image}.jpg");
+    @media screen and (min-width: 768px) {
+      background-image: url("./images/desktop/image-#{$image}.jpg");
+    }
+  }
+}
+
+.arrow-down-img {
+  width: 36px;
+  height: 114px;
+  background-image: url("./images/icon-arrow-down.svg");
+}
+
+.hamburger-img {
+  background-image: url("./images/icon-hamburger.svg");
+  width: 24px;
+  height: 18px;
+}
+
+$testimonial-images: emily, thomas, jennie;
+
+@each $name in $testimonial-images {
+  .#{$name}-img {
+    background-image: url("./images/image-#{$name}.jpg");
+  }
+}

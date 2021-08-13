@@ -1,0 +1,98 @@
+
+@use './typography';
+@use './colors';
+
+.tile-wrapper {
+    display:flex;
+    flex-direction: column;
+}
+
+.tile {
+    flex-basis: 300px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+$sizes: 25, 50, 100;
+@each $size in $sizes {
+    .tile-#{$size} {
+        width: #{$size+ "\%"};
+    }
+    .tile--md-#{$size} {
+        @media only screen and (min-width:768px) {
+            width: #{$size + "\%"};
+        }
+    }
+}
+.text-tile {
+    order: 2;
+    .text-tile__title {
+        @extend .text-title;
+        font-size: 2rem;
+        color: colors.$dark-blue-neutral;
+    }
+
+    .text-tile__description {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: colors.$dark-gray-blue;
+    }
+
+    .text-tile__link {
+        @extend .text-title;
+        margin: 1.5rem 0;
+        text-transform: uppercase;
+        color: colors.$dark-blue-neutral;
+        position: relative;
+        display: inline-block;
+
+    }
+    $colors: ('yellow': colors.$lightyellow, 'red': colors.$lightred);
+    @each $color, $val in $colors {
+        .text-tile__link--#{$color}::after {
+            content: "";
+            position: absolute;
+            width: 115%;
+            height: .5rem;
+            background-color: $val;
+            top: .75rem;
+            left: -7.5%;
+            z-index: -1;
+            border-radius: .5rem;
+
+            }
+        }
+}
+
+.combo-tile {
+    flex-basis: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    .combo-tile__title {
+        @extend .text-title;
+        font-size: 28px;
+        margin: 1.5rem 0;
+    }
+    .combo-tile__description {
+        line-height: 1.5;
+        margin-bottom: 2rem;
+        font-size: 16px;
+        margin-top: 0;
+    }
+}
+
+.graphic-design-img {
+    .combo-tile__title, .combo-tile__description {
+        color: colors.$dark-cyan;
+    }
+}
+
+.photography-img {
+    .combo-tile__title, .combo-tile__description {
+        color: colors.$dark-blue;
+    }
+}

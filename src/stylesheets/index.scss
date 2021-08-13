@@ -1,0 +1,24 @@
+
+@use './normalize';
+@use './typography';
+@use './tile';
+@use './images';
+@use './section';
+@use './navigation';
+@use './testimonial';
+@use './gallery';
+@use './footer';
+
+body {
+    @extend .text-normal;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.link {
+    text-decoration: none;
+}
+
