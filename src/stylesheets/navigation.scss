@@ -1,43 +1,98 @@
+@use './colors';
+@use './typography';
+
 .navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1rem;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 5rem;
 
-    .navigation__inner {
-        display: none;
-        visibility: hidden;
-        list-style: none;
+  .navigation__inner {
+    display: none;
+    visibility: hidden;
+    list-style: none;
+    padding: 0;
+    flex-direction: row;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      visibility: visible;
+    }
+
+    &.mobile-show {
+      display: flex;
+      visibility: visible;
+      position: absolute;
+      flex-direction: column;
+      align-items: center;
+      width: calc(100vw - 3rem);
+      left: 0;
+      right: 0;
+      top: 7rem;
+      background: white;
+      padding: 2rem;
+      margin: 0 auto;
+    }
+    &.mobile-show::before {
+      content: "";
+      width: 0px;
+      height: 0px;
+      position: absolute;
+      border-left: 20px solid transparent;
+      border-right: 20px solid #fff;
+      border-top: 20px solid transparent;
+      border-bottom: 24px solid #fff;
+      right: 0px;
+      top: -24px;
+    }
+  }
+
+  .navigation__item {
+    list-style: none;
+    margin: .5rem 0.75rem;
+    padding: 1rem;
+
+    @media screen and (min-width: 768px) {
         padding: 0;
-        flex-direction: row;
+    }
+  }
 
-        @media screen and (min-width: 768px) {
-            display: flex;
-            visibility: visible;
-        }
-    }
+  .navigation__link {
+    color: colors.$dark-gray-blue;
+    font-size: 20px;
 
-    .navigation__item {
-        list-style: none;
-        margin: 0 0.75rem;
+    @media screen and (min-width: 768px) {
+      color: colors.$white;
     }
-    
-    .navigation__item--md-hidden {
-        
-            @media screen and (min-width: 768px){
-                display: none;
-                visibility: hidden;
-            
-        }
+  }
+
+  .contact-link {
+      @media screen and (max-width: 767px){
+        font-family: typography.$title-font;
+        color: black;
+        background-color: #fad400;
+        border-radius: 2rem;
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+        font-size: 16px;
+      }
+  }
+
+  .navigation__item--md-hidden {
+    @media screen and (min-width: 768px) {
+      display: none;
+      visibility: hidden;
     }
+  }
 }
 
 .logo {
-    background-image: url('./images/logo.svg');
-    width: 124px;
-    height: 24px;
+  background-image: url("./images/logo.svg");
+  background-repeat: no-repeat;
+  width: 124px;
+  height: 24px;
 }
