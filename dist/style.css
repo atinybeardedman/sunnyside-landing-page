@@ -429,6 +429,19 @@ ul {
   text-align: center;
   padding: 2rem 1.5rem;
 }
+@media screen and (min-width: 768px) {
+  .testimonial {
+    padding: 7rem 1.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial__article_wrapper {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
 
 .testimonial__article {
   margin-bottom: 4.5rem;
@@ -440,6 +453,11 @@ ul {
   font-size: 16px;
   letter-spacing: 0.2rem;
   margin: 2rem auto 3.5rem;
+}
+@media screen and (min-width: 768px) {
+  .testimonial__title {
+    font-size: 20px;
+  }
 }
 
 .testimonial__article_avatar {
@@ -455,6 +473,11 @@ ul {
   line-height: 1.5;
   font-size: 18px;
   margin: 2rem auto;
+}
+@media screen and (min-width: 768px) {
+  .testimonial__article_text {
+    padding: 1rem 2rem 2rem;
+  }
 }
 
 .testimonial__article_name {
