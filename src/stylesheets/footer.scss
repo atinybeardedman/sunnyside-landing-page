@@ -5,6 +5,12 @@
     background-color: colors.$cyan-neutral;
     padding: 2rem;
     text-align: center;
+
+    @media screen and (min-width:768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .footer__logo-container {
@@ -20,6 +26,11 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem 0;
+
+    @media screen and (min-width:768px) {
+        margin-bottom: 1.5rem;
+    }
+
 }
 
 .site-map__link {
@@ -35,4 +46,10 @@
 
 .social__icon-link {
     color: colors.$dark-cyan-light;
+}
+
+.footer__section {
+    @media screen and (min-width:768px) {
+        min-width: 20rem;
+    }
 }
