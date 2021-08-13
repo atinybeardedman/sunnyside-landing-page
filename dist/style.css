@@ -513,6 +513,13 @@ ul {
   padding: 2rem;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .footer__logo-container {
   margin: 2rem auto;
@@ -528,6 +535,11 @@ ul {
   justify-content: space-between;
   padding: 1rem 0;
 }
+@media screen and (min-width: 768px) {
+  .footer__site-map {
+    margin-bottom: 1.5rem;
+  }
+}
 
 .site-map__link {
   color: #458c7e;
@@ -542,6 +554,12 @@ ul {
 
 .social__icon-link {
   color: #458c7e;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__section {
+    min-width: 20rem;
+  }
 }
 
 .main {
