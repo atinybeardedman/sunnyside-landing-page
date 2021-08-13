@@ -8,6 +8,10 @@
     flex-direction: column;
     color: white;
 
+    @media screen and (min-width: 768px) {
+        min-height: 790px;
+    }
+
     .hero__title {
         @extend .text-title;
         font-size: 38px;
@@ -16,5 +20,10 @@
         letter-spacing: 0.5rem;
         margin-bottom: 3rem;
         margin-top: 0;
+        @media screen and (min-width: 768px) {
+            font-size: 60px;
+            margin-top: -8rem;
+            margin-bottom: 3rem;
+        }
     }
 }
