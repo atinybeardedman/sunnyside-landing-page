@@ -277,6 +277,11 @@ ul {
   width: 100%;
   height: 5rem;
 }
+@media screen and (min-width: 768px) {
+  .navigation {
+    height: 7rem;
+  }
+}
 .navigation .navigation__inner {
   display: none;
   visibility: hidden;
@@ -288,6 +293,7 @@ ul {
   .navigation .navigation__inner {
     display: flex;
     visibility: visible;
+    align-items: center;
   }
 }
 .navigation .navigation__inner.mobile-show {
@@ -321,29 +327,28 @@ ul {
   margin: 0.5rem 0.75rem;
   padding: 1rem;
 }
-@media screen and (min-width: 768px) {
-  .navigation .navigation__item {
-    padding: 0;
-  }
-}
 .navigation .navigation__link {
   color: #818498;
-  font-size: 20px;
+  font-size: 12px;
 }
 @media screen and (min-width: 768px) {
   .navigation .navigation__link {
+    font-size: 20px;
     color: white;
   }
 }
+.navigation .contact-link {
+  font-family: "Fraunces", serif;
+  color: black;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-size: 16px;
+  background-color: white;
+}
 @media screen and (max-width: 767px) {
   .navigation .contact-link {
-    font-family: "Fraunces", serif;
-    color: black;
     background-color: #fad400;
-    border-radius: 2rem;
-    padding: 1rem 2rem;
-    text-transform: uppercase;
-    font-size: 16px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -356,8 +361,13 @@ ul {
 .logo {
   background-image: url("./images/logo.svg");
   background-repeat: no-repeat;
+  background-size: cover;
   width: 124px;
-  height: 24px;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    width: 170px;
+  }
 }
 
 .testimonial {
